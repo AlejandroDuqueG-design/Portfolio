@@ -14,8 +14,8 @@ function NavBar() {
     <Navbar fluid rounded>
       <Link to="/">
         <NavbarBrand>
-          <img src={logoAD} className="mr-3 h-8 sm:h-11" alt="Logo Alejandro Duque" />
-          <span className="self-center whitespace-nowrap text-l font-semibold dark:text-white">My WebDev Portfolio</span>
+          <img src={logoAD} className="mr-3 h-11 sm:h-13" alt="Logo Alejandro Duque" />
+          <span className="self-center ml-2 whitespace-nowrap text-lg font-semibold dark:text-white">WebDev Portfolio</span>
         </NavbarBrand>
       </Link>
 
@@ -27,13 +27,19 @@ function NavBar() {
       </div>
       <NavbarCollapse>
         <Link to="/">
-          <NavbarLink active={location.pathname === "/"}>Home</NavbarLink>
+          <NavbarLink className="text-black text-lg hover:text-indigo-900" active={location.pathname === "/"}>
+            Home
+          </NavbarLink>
         </Link>
         <Link to="/aboutme">
-          <NavbarLink active={location.pathname === "/aboutme"}>About me</NavbarLink>
+          <NavbarLink className="text-black text-lg hover:text-indigo-900" active={location.pathname === "/aboutme"}>
+            About me
+          </NavbarLink>
         </Link>
         <Link to="/projects">
-          <NavbarLink active={location.pathname === "/projects"}>Projects</NavbarLink>
+          <NavbarLink className="text-black text-lg hover:text-indigo-900" active={location.pathname === "/projects"}>
+            Projects
+          </NavbarLink>
         </Link>
       </NavbarCollapse>
     </Navbar>
