@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 function ProjectsPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-indigo-950 text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white text-black">
       <h3 className="text-2xl font-bold mt-5 mb-5">Web Development Projects</h3>
 
       <p className="text-lg p-10">
@@ -16,8 +16,8 @@ function ProjectsPage() {
 
       {/* LINK TO PROJECT 1 */}
       {projects.map((project) => (
-        <Card className="max-w-md mb-3" imgAlt="Interfaz Screenshot" imgSrc={project.imageUrl}>
-          <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
+        <Card className="max-w-md mb-5" imgAlt="Interfaz Screenshot" imgSrc={project.imageCover}>
+          <h5 className="text-3xl font-bold flex items/center justify-center tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">{project.description}</p>
           <Link to={`/projects/${project.id}`} key={project.id} className="w-full">
             <Button className="mt-2 w-full flex items-center justify-center text-2xl font-normal" style={{ backgroundColor: "#581c87" }}>

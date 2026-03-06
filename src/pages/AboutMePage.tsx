@@ -1,6 +1,6 @@
 function AboutMePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-indigo-950 text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white text-black">
       <h3 className="text-3xl font-bold">I am Alejandro Duque.</h3>
       <p className="mt-4 text-lg p-10">
         I am a frontend web developer UX/UI Designer with experience in React, TypeScript, and Tailwind CSS. Passionate about creating user-friendly
