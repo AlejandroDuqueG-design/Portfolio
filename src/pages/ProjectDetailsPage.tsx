@@ -1,5 +1,8 @@
 import { projects } from "@/utils/projectData";
 import { useParams } from "react-router";
+import { FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaHtml5 } from "react-icons/fa";
 
 function ProjectDetailsPage() {
   const { project } = useParams();
@@ -14,16 +17,23 @@ function ProjectDetailsPage() {
   console.log(projects[projectIndex]);
 
   return (
-    <div>
-      <div className="text-2xl flex items-center justify-center font-bold mt-5">{title}</div>
-      <div className="mb-3 flex flex-col items-center justify-center max-w-screen mt-3 p-5">{description}</div>
-      <div className="flex items-center justify-center">
-        <div className="w-3/5 rounded-xl border-2 border-green-500">
-          <img src={projectImages[0].src} />
-        </div>
+    <div className="flex flex-col items-center justify-center gap-5 mx-7 my-5">
+      <div className="text-2xl font-bold">{title}</div>
+      <div className="text-justify">{description}</div>
+
+      <div className="rounded-xl border-2 border-green-500 w-full mx-1">
+        <img src={projectImages[0].src} className="w-full object-cover rounded-xl" />
       </div>
-      <div className="mb-3 flex flex-col items-center justify-center max-w-screen mt-3 p-5">{methodology}</div>
-      <div className="flex items-center justify-center">IMAGEN</div>
+
+      <div className="w-full flex flex-row items-center justify-center gap-2 bg-gray-100 py-2 mx-5 my-5 rounded-lg">
+        <FaHtml5 className="text-red-500 text-2xl rounded-1x1 md:text-4xl lg:text-6xl" />
+        <IoLogoJavascript className="text-yellow-400 text-2xl rounded-1x1 md:text-4xl lg:text-6xl" />
+        <FaReact className="text-blue-700 text-2xl md:text-4xl lg:text-6xl" />
+      </div>
+      <div className="text-justify">{methodology}</div>
+      <div className="rounded-xl border-2 border-green-500 w-full mx-1">
+        <img src={projectImages[0].src} className="w-full object-cover rounded-xl" />
+      </div>
     </div>
   );
 }
