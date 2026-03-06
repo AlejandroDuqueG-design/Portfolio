@@ -11,7 +11,7 @@ function NavBar() {
   useEffect(() => {}, []);
 
   return (
-    <Navbar fluid className="bg-fuchsia-900">
+    <Navbar fluid className="bg-orange-700">
       <Link to="/">
         <NavbarBrand>
           <img src={logoAD} className="mr-3 h-11 sm:h-13" alt="Logo Alejandro Duque" />
