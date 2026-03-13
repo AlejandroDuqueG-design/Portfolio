@@ -8,7 +8,7 @@ import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 
 function App() {
   return (
-    <div>
+    <div className="pt-16">
       <NavBar />
 
       <Routes>

@@ -1,6 +1,6 @@
 import { Avatar, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
 import { Link, useLocation } from "react-router";
-import logoAD from "@/assets/LogoAD.png";
+import ADLogo from "@/assets/ADLogo.png";
 import profileimg from "@/assets/img-perfil.jpg";
 import { useEffect } from "react";
 
@@ -11,11 +11,11 @@ function NavBar() {
   useEffect(() => {}, []);
 
   return (
-    <Navbar fluid className="bg-orange-700">
+    <Navbar fluid className="bg-orange-700 fixed top-0 left-0 right-0 z-50">
       <Link to="/">
         <NavbarBrand>
-          <img src={logoAD} className="mr-3 h-11 sm:h-13" alt="Logo Alejandro Duque" />
-          <span className="self-center ml-2 whitespace-nowrap text-lg font-semibold dark:text-white">WebDev Portfolio</span>
+          <img src={ADLogo} className="mr-3 h-9 sm:h-11" alt="Logo Alejandro Duque" />
+          <span className="self-center ml-2 whitespace-nowrap text-lg font-normal dark:text-white">WebDev Portfolio</span>
         </NavbarBrand>
       </Link>
 
@@ -27,17 +27,17 @@ function NavBar() {
       </div>
       <NavbarCollapse>
         <Link to="/">
-          <NavbarLink className="text-black text-lg hover:text-indigo-900" active={location.pathname === "/"}>
+          <NavbarLink className="text-black text-2xl font-light hover:text-indigo-800" active={location.pathname === "/"}>
             Home
           </NavbarLink>
         </Link>
         <Link to="/aboutme">
-          <NavbarLink className="text-black text-lg hover:text-indigo-900" active={location.pathname === "/aboutme"}>
+          <NavbarLink className="text-black text-2xl font-light hover:text-indigo-800" active={location.pathname === "/aboutme"}>
             About me
           </NavbarLink>
         </Link>
         <Link to="/projects">
-          <NavbarLink className="text-black text-lg hover:text-indigo-900" active={location.pathname === "/projects"}>
+          <NavbarLink className="text-black text-2xl font-light hover:text-indigo-800" active={location.pathname === "/projects"}>
             Projects
           </NavbarLink>
         </Link>
