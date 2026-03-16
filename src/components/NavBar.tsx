@@ -1,7 +1,7 @@
 import { Avatar, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
 import { Link, useLocation } from "react-router";
 import ADLogo from "@/assets/ADLogo.png";
-import profileimg from "@/assets/img-perfil.jpg";
+import profileimg from "@/assets/profileimg.jpg";
 import { useEffect } from "react";
 
 function NavBar() {
