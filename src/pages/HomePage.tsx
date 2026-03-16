@@ -1,11 +1,15 @@
 import { Carousel } from "flowbite-react";
+import covercarouselwnd from "@/assets/covercarouselwnd.png";
+import growhubcovercarousel from "@/assets/growhubcovercarousel.png";
+import huellitaspagelayout from "@/assets/huellitaspagelayout.png";
 
 function HomePage() {
+  console.log(covercarouselwnd, growhubcovercarousel, huellitaspagelayout);
   return (
     <div className="w-full bg-white text-black">
       <header className="text-center py-10 px-4">
         <h1 className="text-4xl font-bold mb-4">Welcome to my web dev Portfolio</h1>
-        <h3 className="text-lg mb-6 text-gray-600">This is a showcase of my web development projects and skills.</h3>
+        <h2 className="text-lg mb-6 text-gray-600">This is a showcase of my web development projects and skills.</h2>
 
         <div className="max-w-2xl mx-auto">
           <p className="text-lg leading-relaxed">
@@ -16,11 +20,17 @@ function HomePage() {
       </header>
 
       <section className="max-w-4xl mx-auto px-4 pb-20">
-        <div className="h-64 sm:h-80 md:h-96 xl:h-[500px]">
-          <Carousel slideInterval={5000}>
-            <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="Project 1" className="object-cover h-full w-full" />
-            <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="Project 2" className="object-cover h-full w-full" />
-            <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="Project 3" className="object-cover h-full w-full" />
+        <div className="h-70 sm:h-80 xl:h-96 2xl:h-120">
+          <Carousel slide={true} slideInterval={2000}>
+            <div className="flex w-full items-center justify-center">
+              <img src={covercarouselwnd} alt="Project 1" className="w-full h-full object-cover" />
+            </div>
+            <div className="flex w-full items-center justify-center">
+              <img src={growhubcovercarousel} alt="Project 2" className="w-full h-full object-cover" />
+            </div>
+            <div className="flex w-full items-center justify-center">
+              <img src={huellitaspagelayout} alt="Project 3" className="w-full h-full object-cover" />
+            </div>
           </Carousel>
         </div>
       </section>
