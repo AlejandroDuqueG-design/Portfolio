@@ -2,7 +2,6 @@ import profileimg from "@/assets/profileimg.jpg";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaBehanceSquare } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
 
 function AboutMePage() {
   return (
@@ -15,11 +14,33 @@ function AboutMePage() {
       </p>
       <div>
         <img className="w-96 h-96 rounded-full object-cover border-4 border-gray-200" src={profileimg} alt="Imagen de Perfil" />
-        <div className="flex flex-row items-center justify-center gap-2 py-2 mx-5 my-5">
-          <FaGithub className="text-2xl rounded-1x1 md:text-4xl lg:text-4xl" />
-          <FaBehanceSquare className="text-2xl rounded-1x1 md:text-4xl lg:text-4xl" />
-          <FaLinkedin className="text-2xl rounded-1x1 md:text-4xl lg:text-4xl" />
-          <SiGmail className="text-2xl rounded-1x1 md:text-4xl lg:text-4xl" />
+        <div className="flex flex-row items-center justify-center gap-6 py-2 mx-5 my-5">
+          <a
+            href="https://github.com/AlejandroDuqueG-design"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform hover:scale-110"
+          >
+            <FaGithub className="text-2xl md:text-4xl lg:text-4xl" />
+          </a>
+
+          <a
+            href="https://www.behance.net/alejandroduque28"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform hover:scale-110"
+          >
+            <FaBehanceSquare className="text-2xl md:text-4xl lg:text-4xl text-[#053eff]" />
+          </a>
+
+          <a
+            href="https://linkedin.com/in/alejandroduque-webdeveloper/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform hover:scale-110"
+          >
+            <FaLinkedin className="text-2xl md:text-4xl lg:text-4xl text-[#0077b5]" />
+          </a>
         </div>
       </div>
     </div>
