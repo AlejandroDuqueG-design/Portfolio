@@ -5,6 +5,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import AboutMePage from "./pages/AboutMePage";
 import ContactInfoPage from "./pages/ContactInfoPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<AboutMePage />} />
           <Route path="contactinfo" element={<ContactInfoPage />} />
         </Route>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
