@@ -23,17 +23,11 @@ function NavBar() {
         <Link to="/aboutme">
           <Avatar alt="Profile" img={profileimg} rounded />
         </Link>
-        <NavbarToggle />
       </div>
       <NavbarCollapse>
         <Link to="/">
           <NavbarLink className="text-black text-2xl font-light hover:text-indigo-800" active={location.pathname === "/"}>
             Home
-          </NavbarLink>
-        </Link>
-        <Link to="/aboutme">
-          <NavbarLink className="text-black text-2xl font-light hover:text-indigo-800" active={location.pathname === "/aboutme"}>
-            About me
           </NavbarLink>
         </Link>
         <Link to="/projects">
