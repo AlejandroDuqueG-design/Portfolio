@@ -1,6 +1,27 @@
 @import "tailwindcss";
-@import "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
+@import "flowbite-react/plugin/tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+
+/* 1. Force the Carousel Container to behave */
+[data-testid="carousel"] > div:first-child {
+  display: flex !important;
+  overflow: hidden !important;
+  position: relative !important;
+  height: 100% !important;
+}
+
+/* 2. Force the slides to hide unless they are active */
+[data-testid="carousel-item"] {
+  display: none !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+[data-active="true"] {
+  display: block !important;
+  position: relative !important;
+}
 
 /*:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
