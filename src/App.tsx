@@ -3,12 +3,13 @@ import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import AboutMePage from "./pages/AboutMePage";
-import ContactInfoPage from "./pages/ContactInfoPage";
+
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
-    <div>
+    <div className="pt-16">
       <NavBar />
 
       <Routes>
@@ -19,8 +20,8 @@ function App() {
         </Route>
         <Route path="/aboutme">
           <Route index element={<AboutMePage />} />
-          <Route path="contactinfo" element={<ContactInfoPage />} />
         </Route>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
